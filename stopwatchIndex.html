@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="stopwatchStyles.css">
+</head>
+<body>
+
+    <section id="label">
+        <div class="title">
+            <h1>Stopwatch</h1>
+        </div>
+    </section>
+
+    <section id="stopwatch">
+        <div class="digits">
+            <div class="hours">
+                <div class="seven-segment-digit" id="digit-0">
+                    <div class="segment a"></div>
+                    <div class="segment b"></div>
+                    <div class="segment c"></div>
+                    <div class="segment d"></div>
+                    <div class="segment e"></div>
+                    <div class="segment f"></div>
+                    <div class="segment g"></div>
+                </div>
+
+                <div class="seven-segment-digit" id="digit-1">
+                    <div class="segment a"></div>
+                    <div class="segment b"></div>
+                    <div class="segment c"></div>
+                    <div class="segment d"></div>
+                    <div class="segment e"></div>
+                    <div class="segment f"></div>
+                    <div class="segment g"></div>
+                </div>
+            </div>
+
+            <div class="separator">:</div>
+
+            <div class="minutes">
+                <div class="seven-segment-digit" id="digit-2">
+                    <div class="segment a"></div>
+                    <div class="segment b"></div>
+                    <div class="segment c"></div>
+                    <div class="segment d"></div>
+                    <div class="segment e"></div>
+                    <div class="segment f"></div>
+                    <div class="segment g"></div>
+                </div>
+
+                <div class="seven-segment-digit" id="digit-3">
+                    <div class="segment a"></div>
+                    <div class="segment b"></div>
+                    <div class="segment c"></div>
+                    <div class="segment d"></div>
+                    <div class="segment e"></div>
+                    <div class="segment f"></div>
+                    <div class="segment g"></div>
+                </div>
+            </div>
+
+            <div class="separator">:</div>
+
+            <div class="seconds">
+                <div class="seven-segment-digit" id="digit-4">
+                    <div class="segment a"></div>
+                    <div class="segment b"></div>
+                    <div class="segment c"></div>
+                    <div class="segment d"></div>
+                    <div class="segment e"></div>
+                    <div class="segment f"></div>
+                    <div class="segment g"></div>
+                </div>
+
+                <div class="seven-segment-digit" id="digit-5">
+                    <div class="segment a"></div>
+                    <div class="segment b"></div>
+                    <div class="segment c"></div>
+                    <div class="segment d"></div>
+                    <div class="segment e"></div>
+                    <div class="segment f"></div>
+                    <div class="segment g"></div>
+                </div>
+            </div>
+
+            <div class="separator">.</div>
+            
+            <div class="millieseconds">
+                <div class="seven-segment-digit" id="digit-6">
+                    <div class="segment a"></div>
+                    <div class="segment b"></div>
+                    <div class="segment c"></div>
+                    <div class="segment d"></div>
+                    <div class="segment e"></div>
+                    <div class="segment f"></div>
+                    <div class="segment g"></div>
+                </div>
+                
+                <div class="seven-segment-digit" id="digit-7">
+                    <div class="segment a"></div>
+                    <div class="segment b"></div>
+                    <div class="segment c"></div>
+                    <div class="segment d"></div>
+                    <div class="segment e"></div>
+                    <div class="segment f"></div>
+                    <div class="segment g"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="button">
+        <button class="button" id="startButton" onclick="startTime()">Start</button>
+        <button class="button" id="resetButton" onclick="resetTime()">Reset</button>
+    </section>
+
+    <script src="stopwatchScript.js"></script>
+    
+</body>
+</html>

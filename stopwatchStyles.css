@@ -1,0 +1,144 @@
+body {
+    background-color: aqua;
+}
+
+#label {
+    color: black;
+    width: fit-content;
+    margin: auto;
+    text-decoration: underline;
+}
+
+.digits {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.separator{
+    font-size: 100px;
+    align-items: center;
+}
+
+.separator.blink {
+    animation: blink 0.9s step-start infinite;
+}
+
+@keyframes blink {
+    50% {opacity: 0;}
+}
+
+.hours, .minutes, .seconds, .millieseconds {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.millieseconds {
+    transform: scale(0.9);
+}
+
+.seven-segment-digit {
+    position: relative;
+    width: 100px;
+    height: 200px;
+}
+
+.segment {
+    background-color: black;
+    opacity: 0.1;
+    position: absolute;
+}
+
+.segment.on {
+    opacity: 1;
+}
+
+.segment.a {
+    top: 0;
+    left: 20px;
+    width: 60px;
+    height: 20px;
+}
+
+.segment.b {
+    top: 20px;
+    right: 0;
+    width: 20px;
+    height: 70px;
+}
+
+.segment.c {
+    top: 110px;
+    right: 0;
+    width: 20px;
+    height: 70px;
+}
+
+.segment.d {
+    bottom: 0;
+    left: 20px;
+    width: 60px;
+    height: 20px;
+}
+
+.segment.e {
+    top: 110px;
+    left: 0;
+    width: 20px;
+    height: 70px;
+}
+
+.segment.f {
+    top: 20px;
+    left: 0;
+    width: 20px;
+    height: 70px;
+}
+
+.segment.g {
+    top: 90px;
+    left: 20px;
+    width: 60px;
+    height: 20px;
+}
+
+/* used as an example for the buttons, will change them */
+.button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#button {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#startButton {
+    background-color: green;
+}
+
+#resetButton{
+    background-color: red;
+}
+
+#startButton:hover, #resetButton:hover{
+    cursor: pointer;
+}
+
+#startButton:active, #resetButton:active {
+    background-color: antiquewhite;
+}
