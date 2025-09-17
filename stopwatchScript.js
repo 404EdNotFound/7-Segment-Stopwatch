@@ -43,8 +43,8 @@ function updateTime() {
 
         millieseconds = Math.floor(elapsedTime % 1000)
         seconds = Math.floor(elapsedTime / 1000) % 60
-        minutes = (Math.floor(seconds / 60)) % 60
-        hours = Math.floor(seconds / 3600)
+        minutes = (Math.floor(elapsedTime / 1000 / 60)) % 60
+        hours = Math.floor(elapsedTime / 1000 / 3600)
 
         document.querySelectorAll(".separator").forEach(part => {
             part.classList.add("blink")
@@ -62,7 +62,7 @@ function updateTime() {
 
 //Needed help with this
 function displayTime() {
-    numberString = hours.toString().padStart(2, "0") + minutes.toString().padStart(2, "0") + seconds.toString().padStart(2, "0") + millieseconds.toString().slice(-2).padStart(2, "0")
+    numberString = hours.toString().padStart(2, "0") + minutes.toString().padStart(2, "0") + seconds.toString().padStart(2, "0") + millieseconds.toString().slice(0, 3).padStart(3, "0") // Fixed the logical error with millieseconds with help
 
     for (let i = 0; i < numberString.length; i++) {
         let digit = parseInt(numberString[i])
@@ -85,5 +85,15 @@ function displayTime() {
     }
 }
 
+document.addEventListener("keydown", (e) => {
+    if (e.key == " ") {
+        startTime()
+    }
+
+    if (e.key.toLowerCase() == "r") {
+        resetTime()
+    }
+})
+
 setInterval(updateTime, 10)
-document.addEventListener("DOMContentLoaded", () => {updateTime(); displayTime()})
+document.addEventListener("DOMContentLoaded", () => {displayTime()})
