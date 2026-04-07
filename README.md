@@ -1,5 +1,12 @@
+# Please Read before viewing all files
 # 7-Segment-Stopwatch
 This is a stopwatch written with HTML, CSS and Javascript. Used to create a stopwatch with 7-segment display.
+
+# Features
+* 7-Segment Display created with different Div Tags and Styles with CSS
+* Script for Displaying The Stopwatch
+* Updates Every Second
+* Buttons for Starting, Pausing and Resetting
 
 ## Remixing Ethically: A Note from the Author
 This code is licensed under the MIT License to ensure compatibility with GitHub’s systems.
